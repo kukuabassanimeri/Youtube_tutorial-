@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "Youtube_tutorial/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "Youtube_tutorial/wsgi.py"
+        }
+    ]
+}

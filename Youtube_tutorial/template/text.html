@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <h1>This is testing page </h1>
+    <p>I am {{firstname}} {{secondname}} learning python Django</p>
+</div>
+
+{% with firstname="Cicinasra" %} <!--Create variable directly in the template-->
+<p>Hello {{firstname}}, how are you doing?</p>
+{% endwith%}
+ 
+{% comment %}
+<p>Django variable tags</p>
+{% endcomment %}
+{% if greeting == 1 %}
+  <p>Hello, this is django tutorial for beginners</p>
+{% else %}
+  <h1>Bye</h1>
+{% endif %}
+
+{% endblock body %}
